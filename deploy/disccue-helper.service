@@ -1,0 +1,13 @@
+[Unit]
+Description=DiscCue 360 LAN metadata helper
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+EnvironmentFile=%h/.config/disccue360/helper.env
+ExecStart=/usr/bin/python3 -u %h/.local/share/disccue360/helper.py --bind ${DISCCUE_BIND} --cache-dir %h/.local/state/disccue360/cache
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=default.target
