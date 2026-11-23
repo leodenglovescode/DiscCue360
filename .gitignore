@@ -1,0 +1,12 @@
+/build/
+/cache/
+/helper-ip.txt
+/launch.ini
+__pycache__/
+*.py[cod]
+*.log
+*.xex
+*.elf
+.env
+.env.*
+.DS_Store
